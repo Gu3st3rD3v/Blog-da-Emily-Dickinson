@@ -1,1 +1,381 @@
+/* RESET E VARIÁVEIS DE DESIGN */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+:root {
+    --primary-color: #5c2028; /* Bordô literário */
+    --accent-color: #d97736;  /* Laranja terracota suave */
+    --bg-color: #fdfbf7;      /* Creme / Marfim */
+    --bg-card: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-radius: 16px;
+    --transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: rgba(253, 251, 247, 0.95);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-primary:hover {
+    background-color: #3f141a;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* HERO SECTION */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 8%;
+    min-height: 80vh;
+    gap: 40px;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.badge {
+    background-color: #f2e5d9;
+    color: var(--accent-color);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 3.2rem;
+    line-height: 1.2;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    margin-bottom: 30px;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 15px;
+}
+
+.hero-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-img {
+    width: 100%;
+    max-width: 380px;
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    object-fit: cover;
+}
+
+/* SEÇÕES GENÉRICAS */
+.container {
+    padding: 80px 8%;
+}
+
+.bg-light {
+    background-color: #f4eee6;
+    border-radius: 32px;
+}
+
+.section-title {
+    font-size: 2.4rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--text-muted);
+    margin-bottom: 50px;
+}
+
+/* CARDS GRID (BIOGRAFIA) */
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background-color: var(--bg-card);
+    padding: 35px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+}
+
+.highlight-card {
+    border: 2px solid var(--primary-color);
+}
+
+.card-tag {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--accent-color);
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+/* BANNER DE IMAGEM DA CASA */
+.image-banner {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    background-color: #ffffff;
+    border-radius: var(--border-radius);
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    margin-top: 20px;
+}
+
+.banner-img-box {
+    flex: 1;
+}
+
+.banner-img-box img {
+    width: 100%;
+    border-radius: var(--border-radius);
+    height: 280px;
+    object-fit: cover;
+}
+
+.banner-text {
+    flex: 1;
+}
+
+.banner-text h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+/* CARDS POEMAS */
+.poems-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.poem-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: var(--transition);
+    border: 1px solid #e2d9cd;
+}
+
+.poem-card:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+.poem-card:hover span, .poem-card:hover p {
+    color: #e2d9cd;
+}
+
+.poem-card span {
+    font-size: 0.8rem;
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+.poem-card h3 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+.poem-card .preview {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+/* DISPLAY DO POEMA */
+.poem-display {
+    background-color: white;
+    padding: 40px;
+    border-radius: var(--border-radius);
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.04);
+}
+
+.poem-display h3 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.poem-content {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    white-space: pre-line; /* Mantém as quebras de linha dos versos */
+    color: #444;
+}
+
+/* LEGADO */
+.legacy-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.legacy-text {
+    flex: 1;
+}
+
+.legacy-text h2 {
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.legacy-text p {
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+}
+
+.legacy-image {
+    flex: 1;
+}
+
+.legacy-image img {
+    width: 100%;
+    border-radius: var(--border-radius);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 40px;
+    background-color: var(--primary-color);
+    color: white;
+    margin-top: 60px;
+}
+
+.sub-footer {
+    font-size: 0.85rem;
+    opacity: 0.7;
+    margin-top: 5px;
+}
+
+/* RESPONSIVIDADE (CELULARES E TABLETS) */
+@media (max-width: 900px) {
+    .hero, .image-banner, .legacy-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 2.4rem;
+    }
+
+    .hero-btns {
+        justify-content: center;
+    }
+
+    .nav-links {
+        display: none; /* Em projetos avançados, pode-se criar menu hambúrguer */
+    }
+}
