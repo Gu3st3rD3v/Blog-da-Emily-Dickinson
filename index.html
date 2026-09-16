@@ -1,1 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emily Dickinson | A Poeta do Isolamento</title>
+    <!-- Fontes do Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <!-- NAV BAR -->
+    <header class="navbar">
+        <div class="logo">Emily Dickinson</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#biografia">Biografia</a></li>
+                <li><a href="#poemas">Poemas</a></li>
+                <li><a href="#legado">O Legado</a></li>
+            </ul>
+        </nav>
+        <button class="btn-primary" onclick="scrollToPoemas()">Ler Poemas</button>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <span class="badge">1830 – 1886</span>
+            <h1>A Poeta da Imensidão e do Isolamento</h1>
+            <p>Conheça a vida, a reclusão e a genialidade de uma das maiores vozes da literatura mundial.</p>
+            <div class="hero-btns">
+                <a href="#biografia" class="btn-primary">Conhecer História</a>
+                <a href="#poemas" class="btn-secondary">Explorar Versos</a>
+            </div>
+        </div>
+        <div class="hero-image-container">
+            <!-- Imagem 1: Retrato Principal -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/56/Emily_Dickinson_daguerreotype_crop.jpg" alt="Retrato de Emily Dickinson" class="hero-img">
+        </div>
+    </section>
+
+    <!-- BIOGRAFIA SECTION (CARDS) -->
+    <section id="biografia" class="container">
+        <h2 class="section-title">A Trajetória de Emily</h2>
+        <p class="section-subtitle">Do nascimento em Amherst ao mistério de sua vida reclusa.</p>
+
+        <div class="grid-cards">
+            <!-- Card 1: Infância e Juventude -->
+            <div class="card">
+                <div class="card-tag">Infância & Adolescência</div>
+                <h3>Origens e Educação</h3>
+                <p>Nascida em <strong>10 de dezembro de 1830</strong>, em Amherst, Massachusetts (EUA). Cresceu em uma família influente. Estudou na <em>Amherst Academy</em> e no <em>Mount Holyoke Female Seminary</em>. Na juventude, era uma jovem vibrante, apaixonada por botânica e música.</p>
+            </div>
+
+            <!-- Card 2: Reclusão -->
+            <div class="card highlight-card">
+                <div class="card-tag">A Vida Adulta</div>
+                <h3>O Isolamento Voluntário</h3>
+                <p>A partir dos 30 anos, Emily começou a se retirar do convívio social. Passou a viver reclusa na casa da família (The Homestead), vestindo-se quase exclusivamente de branco e mantendo contatos com o mundo externo através de centenas de cartas.</p>
+            </div>
+
+            <!-- Card 3: Morte -->
+            <div class="card">
+                <div class="card-tag">Os Últimos Anos</div>
+                <h3>Morte e Causa</h3>
+                <p>Emily faleceu em <strong>15 de maio de 1886</strong>, aos 55 anos, na mesma casa em que nasceu em Amherst. A causa oficial registrada foi a <strong>doença de Bright</strong> (uma nefrite/inflamação renal grave), associada à hipertensão arterial.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- BANNER COM IMAGEM DA CASA -->
+    <section class="image-banner container">
+        <div class="banner-img-box">
+            <!-- Imagem 2: Museu/Casa -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Emily_Dickinson_Museum.jpg" alt="Casa de Emily Dickinson em Amherst">
+        </div>
+        <div class="banner-text">
+            <h2>The Homestead</h2>
+            <p>A casa da família Dickinson em Amherst, Massachusetts, onde Emily escreveu quase 1.800 poemas em segredo, observando o mundo através da janela do seu quarto no segundo andar.</p>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DE POEMAS INTERATIVA -->
+    <section id="poemas" class="container bg-light">
+        <h2 class="section-title">Poemas Selecionados</h2>
+        <p class="section-subtitle">Clique nos cartões para ler e refletir sobre suas obras mais famosas.</p>
+
+        <div class="poems-grid">
+            <div class="poem-card" onclick="openPoem('p1')">
+                <span>Poema #254</span>
+                <h3>"A esperança é a coisa com penas"</h3>
+                <p class="preview">"A esperança é a coisa com penas / Que pousa na alma..."</p>
+            </div>
+            <div class="poem-card" onclick="openPoem('p2')">
+                <span>Poema #465</span>
+                <h3>"Eu ouvi uma mosca zumbir"</h3>
+                <p class="preview">"Eu ouvi uma mosca zumbir - quando morri - / A quietude no quarto..."</p>
+            </div>
+            <div class="poem-card" onclick="openPoem('p3')">
+                <span>Poema #288</span>
+                <h3>"Eu não sou ninguém! Quem é você?"</h3>
+                <p class="preview">"Eu não sou ninguém! Quem é você? / Você é ninguém - também?..."</p>
+            </div>
+        </div>
+
+        <!-- Área de Exibição do Poema Selecionado -->
+        <div id="poem-display" class="poem-display">
+            <h3 id="poem-title">Selecione um poema acima</h3>
+            <div id="poem-text" class="poem-content">
+                Clique em um dos cards para exibir o poema completo aqui.
+            </div>
+        </div>
+    </section>
+
+    <!-- LEGADO SECTION -->
+    <section id="legado" class="container">
+        <div class="legacy-wrapper">
+            <div class="legacy-text">
+                <h2>A Descoberta do Legado</h2>
+                <p>Durante sua vida, menos de 10 poemas foram publicados (e todos de forma anônima e alterados por editores).</p>
+                <p>Após sua morte em 1886, sua irmã <strong>Lavinia Dickinson</strong> encontrou gavetas cheias de fascículos costurados à mão contendo cerca de <strong>1.775 poemas</strong>. Só então o mundo conheceu a verdadeira imensidão da arte de Emily Dickinson.</p>
+            </div>
+            <div class="legacy-image">
+                <!-- Imagem 3: Manuscrito -->
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Emily_Dickinson_poem.jpg" alt="Manuscrito original de poema de Emily Dickinson">
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>Desenvolvido em homenagem a Emily Dickinson (1830 - 1886)</p>
+        <p class="sub-footer">Hospedado no GitHub Pages</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
