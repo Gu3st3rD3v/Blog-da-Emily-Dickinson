@@ -6,9 +6,9 @@
 }
 
 :root {
-    --primary-color: #5c2028; /* Bordô literário */
-    --accent-color: #d97736;  /* Laranja terracota suave */
-    --bg-color: #fdfbf7;      /* Creme / Marfim */
+    --primary-color: #5c2028;
+    --accent-color: #d97736;
+    --bg-color: #fdfbf7;
     --bg-card: #ffffff;
     --text-color: #2c2c2c;
     --text-muted: #666666;
@@ -309,7 +309,7 @@ h1, h2, h3 {
     font-family: 'Playfair Display', serif;
     font-size: 1.2rem;
     line-height: 1.8;
-    white-space: pre-line; /* Mantém as quebras de linha dos versos */
+    white-space: pre-line;
     color: #444;
 }
 
@@ -360,7 +360,7 @@ footer {
     margin-top: 5px;
 }
 
-/* RESPONSIVIDADE (CELULARES E TABLETS) */
+/* RESPONSIVIDADE */
 @media (max-width: 900px) {
     .hero, .image-banner, .legacy-wrapper {
         flex-direction: column;
@@ -376,6 +376,6 @@ footer {
     }
 
     .nav-links {
-        display: none; /* Em projetos avançados, pode-se criar menu hambúrguer */
+        display: none;
     }
 }
